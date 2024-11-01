@@ -19,6 +19,7 @@ export function getMeal(slug) {
 
 
 export async function saveMeal(meal) {
+  await new Promise(resolve => setTimeout(resolve, 5000));
   meal.slug = slugify(meal.title, { lower: true });
   meal.instructions = xss(meal.instructions);
 

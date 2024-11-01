@@ -13,7 +13,6 @@ export async function shareMeal(formData) {
         creator_email: formData.get('email')
     }
 
-    console.log(meal);
     await saveMeal(meal);
     redirect('/meals')
 
